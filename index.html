@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131a">
+  <title>BudgieOS AI</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">B</div><div><strong>BudgieOS AI</strong><small>Free AI workspace</small></div></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">WORKSPACE</div>
+      <button class="side-link active">◈ <span>Chat</span></button>
+      <button class="side-link" id="clearChat">⌫ <span>Clear conversation</span></button>
+      <div class="sidebar-bottom">
+        <div class="provider-status"><span class="status-dot" id="statusDot"></span><span id="statusText">Checking AI connection…</span></div>
+        <div class="profile"><div class="avatar">B</div><div><strong>BudgieOS User</strong><small>Local workspace</small></div></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+        <div class="model-wrap"><span class="model-label">Model</span><select id="modelSelect" aria-label="AI model"><option value="llama3.2">Llama 3.2 (Ollama)</option><option value="qwen2.5">Qwen 2.5 (Ollama)</option><option value="mistral">Mistral (Ollama)</option></select></div>
+        <a class="github-link" href="https://github.com/marwanjony67-svg/use-ai-free" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </header>
+      <section class="chat-area">
+        <div class="welcome" id="welcome">
+          <div class="welcome-symbol">✳</div>
+          <p class="eyebrow">BUDGIEOS AI 1.0</p>
+          <h1>What can I help<br><span>you with today?</span></h1>
+          <p class="welcome-copy">A simple AI workspace. Connect a local model or configure your own compatible provider.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain how an operating system kernel works."><b>⌘</b><span><strong>Learn something</strong><small>Explain a technical topic</small></span></button>
+            <button class="suggestion" data-prompt="Help me write a Python program that organizes files."><b>⌁</b><span><strong>Write some code</strong><small>Build and debug projects</small></span></button>
+            <button class="suggestion" data-prompt="Give me five creative ideas for a small game."><b>✧</b><span><strong>Get creative</strong><small>Explore new ideas</small></span></button>
+            <button class="suggestion" data-prompt="Make a simple study plan for learning C++."><b>▤</b><span><strong>Make a plan</strong><small>Break a goal into steps</small></span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="promptInput" rows="1" placeholder="Message BudgieOS AI…" aria-label="Message BudgieOS AI"></textarea>
+          <div class="composer-tools"><span>AI can make mistakes. Check important information.</span><button id="sendButton" type="submit" aria-label="Send message">↑</button></div>
+        </form>
+        <div class="footer-note">BudgieOS Blue · Your prompts are sent to the provider you configure.</div>
+      </footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
